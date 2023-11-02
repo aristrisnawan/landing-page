@@ -9,7 +9,7 @@ import webflow from "../assets/webflow.png";
 import behance from "../assets/behance.png";
 import imageSection from "../assets/sectionLeft.png";
 import checklist from "../assets/checklist.png";
-// import love from "../assets/love.png";
+import love from "../assets/love.png";
 import income from "../assets/income.png";
 import Card from "../components/Card";
 // import avatar1 from "../assets/avatar1.jpg";
@@ -227,19 +227,20 @@ const Home = () => {
       </div>
       {/* section 6 */}
       <div className=" bg-[#14213D] py-5 flex">
-        <div className=" w-32 h-32 flex items-center justify-center mx-4">
-          <p className=" text-white font-bold text-xl">
+        <div className=" w-32 h-32 tablet:w-auto tablet:h-auto flex items-center justify-center mx-4 tablet:mx-16 tablet:mr-36">
+          <p className=" text-white font-bold text-xl tablet:text-3xl">
             Trusted by <br /> millions of <br /> customers.
           </p>
         </div>
-        <div className="flex gap-x-1 overflow-y-scroll">
+        <div className="flex gap-x-1 overflow-x-scroll tablet:gap-x-6 tablet:overflow-x-hidden">
+          <Card/>
           <Card/>
           <Card/>
           <Card/>
         </div>
       </div>
       {/* section 7 */}
-      {/* <div className="  laptop:h-[37rem] laptop:max-h-[37rem] py-2 laptop:py-10 laptop:grid">
+      <div className="  laptop:h-[37rem] laptop:max-h-[37rem] py-2 laptop:py-10 laptop:grid">
         <div className="tablet:grid tablet:grid-cols-2 laptop:my-auto">
           <div className="">
             <img
@@ -294,7 +295,31 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
+      {/* section 8 */}
+      <div className="bg-[#FCA311] py-4 tablet:py-8">
+        <p className=" text-2xl font-bold text-center tablet:text-4xl">Download AppX <br /> to get started</p>
+        <div className=" flex gap-5 mt-3 justify-center py-2">
+            <div className="bg-black flex gap-x-2 w-32 justify-center py-2 laptop:w-36">
+              <img src={ios} alt="" className=" w-5 h-5 my-auto" />
+              <div className=" text-white">
+                <p className=" text-[0.6rem]">Available now</p>
+                <p className=" text-sm font-medium">App Store</p>
+              </div>
+            </div>
+            <div className="bg-black flex gap-x-2 w-32 justify-center py-2 laptop:w-36">
+              <img src={android} alt="" className=" w-5 h-5 my-auto" />
+              <div className=" text-white">
+                <p className=" text-[0.6rem]">Available now</p>
+                <p className=" text-sm font-medium">Play Store</p>
+              </div>
+            </div>
+          </div>
+      </div>
+      {/* footer */}
+      <div className="text-center text-white py-4 bg-black">
+        <p>Copyright @ Aris Trisnawan 2023</p>
+      </div>
     </div>
   );
 };
